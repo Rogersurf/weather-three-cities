@@ -5,8 +5,8 @@ import sqlite3
 from datetime import date
 
 locations = {
-    "Leblon-RJ": (-22.985479, -43.222832),
-    "Collins 24-MIA": (25.799808, -80.125490),
+    "Leblon": (-22.985479, -43.222832),
+    "Miami Beach": (25.799808, -80.125490),
     "Nørresundby": (57.067962, 9.904931)
 }
 

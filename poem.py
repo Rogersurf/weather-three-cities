@@ -14,12 +14,18 @@ rows = cur.execute("SELECT * FROM weather").fetchall()
 text = "\n".join(str(r) for r in rows)
 
 prompt = f"""
-Write a short poem comparing tomorrow's weather in these locations.
+Using the weather data below:
 
-{ text }
+{text}
 
-Write in English and Portuguese.
-Suggest where it is nicest to be tomorrow.
+Write a short Brazilian-style poem (cordel style).
+
+Requirements:
+- 4 to 8 verses
+- rhymes at the end of the lines
+- compare the weather in the cities
+- suggest where it would be nicest to be tomorrow
+- write first in English, then in Portuguese
 """
 
 response = client.chat.completions.create(
